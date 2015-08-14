@@ -13,11 +13,12 @@ description: > # this means to ignore newlines until "baseurl:"
 # Your website URL (e.g. http://<username>.github.io or http://yourdomain.com)
 # Used for Sitemap.xml and your RSS feed
 url:
+
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
-baseurl: ""
+baseurl: "/jekyll-mdl"
 
 # Contact/Social Info
 email: your-email@domain.com
@@ -34,7 +35,7 @@ gplus_profile:
 # https://instagram.com/<instagram_username>
 instagram_username:
 # https://www.pinterest.com/pintrest_username
-pintrest_username: 
+pintrest_username:
 
 
 # Build settings
