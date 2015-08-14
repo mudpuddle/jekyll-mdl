@@ -10,7 +10,7 @@
     {% for node in pages_list %}
       {% if node.title != null %}
         {% if node.layout == "page" %}
-          <a class="mdl-navigation__link" href="{{ node.url }}">
+          <a class="mdl-navigation__link {% if page.url == node.url %} jekyll-mdl-navactive{% endif %}" href="{{ node.url }}">
             <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored jekyll-mdl-navicon">
               <i class="material-icons">{{ node.icon }}</i>
             </button>
