@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    {% include sidenav.html %}
+
+    <div class="page-content">
+      <div class="container">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+    <script type="text/javascript" src="{{ "/public/lib/mdl/material.min.js" | prepend: site.baseurl }}"></script>
+    <script type="text/javascript">
+
+    </script>
+  </body>
+
+</html>

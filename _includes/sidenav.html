@@ -1,0 +1,23 @@
+{% comment %}
+    The code below dynamically generates a sidebar nav of pages with
+    `layout: page` in the front-matter. See readme for usage.
+{% endcomment %}
+
+<div class="mdl-layout__drawer">
+  <span class="mdl-layout-title">Title</span>
+  <nav class="mdl-navigation">
+    {% assign pages_list = site.pages | sort:"url" %}
+    {% for node in pages_list %}
+      {% if node.title != null %}
+        {% if node.layout == "page" %}
+          <a class="mdl-navigation__link" href="{{ node.url }}">
+            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored jekyll-mdl-navicon">
+              <i class="material-icons">{{ node.icon }}</i>
+            </button>
+            <span class="jekyll-mdl-navtext">{{ node.title }}</span>
+          </a>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </nav>
+</div>
