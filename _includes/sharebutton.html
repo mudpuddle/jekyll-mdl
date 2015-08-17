@@ -1,0 +1,65 @@
+<div id="jekyll-mdl-share" class="mdl-cell--hide-phone mdl-cell--hide-tablet">
+  <button id="share_btn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--fab mdl-button--accent" onclick="share()">
+    <i class="material-icons">share</i>
+  </button>
+  <ul id="jekyll-mdl-share-btns">
+    <li>
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--fab mdl-button--mini-fab mdl-button--colored">
+
+      </button>
+    </li>
+    <li>
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--fab mdl-button--mini-fab mdl-button--colored">
+
+      </button>
+    </li>
+    <li>
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--fab mdl-button--mini-fab mdl-button--colored">
+
+      </button>
+    </li>
+    <li>
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--fab mdl-button--mini-fab mdl-button--colored">
+
+      </button>
+    </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  function share() {
+    var hidden = $("#jekyll-mdl-share-btns").css("display") == "none";
+    if (hidden) {
+        $("#jekyll-mdl-share-btns").fadeIn(250).css("display", "inline-block");
+        console.log("sucess");
+    } else {
+        $("#jekyll-mdl-share-btns").fadeOut(250);
+    }
+  }
+</script>
+
+{% comment %}
+<div id="social_link_container">
+  <div id="share_btn" class="icon share" onclick="share()">
+    <i class="fa fa-share-alt fa-lg"></i>
+  </div>
+  <div id="social_btn">
+    <div class="icon fb"> <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
+      <div class="text">Facebook</div>
+    </div>
+    <div class="icon tw"> <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
+
+      <div class="text">Twitter</div>
+    </div>
+    <div class="icon inst"> <a href="#"><i class="fa fa-instagram fa-lg"></i></a>
+
+      <div class="text">Instagram</div>
+    </div>
+    <div class="icon gplus"> <a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
+      <div class="text">Google+</div>
+    </div>
+    <div class="icon ytube"> <a href="#"><i class="fa fa-youtube fa-lg"></i></a>
+      <div class="text">YouTube</div>
+    </div>
+  </div>
+</div>
+{% endcomment %}
