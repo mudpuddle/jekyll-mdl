@@ -194,6 +194,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/*
+* NOTE: Some rules here are applied using duplicate selectors.
+* This is on purpose to increase their specificity when applied.
+* For example: `.mdl-cell--1-col-phone.mdl-cell--1-col-phone`
+*/
 /**
  * Copyright 2015 Google Inc. All Rights Reserved.
  *
