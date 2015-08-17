@@ -43,3 +43,27 @@
 .jekyll-mdl-navactive {
   background-color: rgb(238,238,238);
 }
+
+// Share button
+#jekyll-mdl-share {
+  position: fixed;
+  right: 40px;
+  bottom: 75px;
+  z-index: 900;
+}
+#jekyll-mdl-share ul {
+  left: 0px;
+  right: 0px;
+  text-align: center;
+  position: absolute;
+  bottom: 64px;
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+#jekyll-mdl-share ul li{
+  margin-bottom: 5px;
+}
+#jekyll-mdl-share-btns {
+  display: none;
+}
