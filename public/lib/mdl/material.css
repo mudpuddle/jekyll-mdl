@@ -4645,7 +4645,12 @@ input.mdl-button[type="submit"] {
   border-collapse: collapse;
   white-space: nowrap;
   font-size: 13px;
-  background-color: rgb(255,255,255); }
+  background-color: rgb(255,255,255);
+  /*
+   * Transform in Safari to solve rendering issue.
+   * See https://github.com/google/material-design-lite/issues/1194
+   */
+  -webkit-transform: translate3d(0, 0, 0); }
   .mdl-data-table thead {
     padding-bottom: 3px; }
     .mdl-data-table thead .mdl-data-table__select {
@@ -5732,9 +5737,12 @@ input.mdl-button[type="submit"] {
   overflow: visible;
   height: 0;
   width: 0;
+  visibility: hidden;
   z-index: -1; }
-  .mdl-menu__container.is-visible {
-    z-index: 999; }
+  .mdl-menu__container.is-visible,
+  .mdl-menu__container.is-animating {
+    z-index: 999;
+    visibility: visible; }
 
 .mdl-menu__outline {
   display: block;
@@ -9282,6 +9290,11 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/*
+* NOTE: Some rules here are applied using duplicate selectors.
+* This is on purpose to increase their specificity when applied.
+* For example: `.mdl-cell--1-col-phone.mdl-cell--1-col-phone`
+*/
 /**
  * Copyright 2015 Google Inc. All Rights Reserved.
  *
