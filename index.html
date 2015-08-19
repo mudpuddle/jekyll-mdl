@@ -2,20 +2,24 @@
 layout: home
 ---
 
-<div>
-
-  <h3>Posts</h3>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span>{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-</div>
+{% for post in site.posts %}
+  <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--4dp">
+    <div class="mdl-card__title">
+      <h2 class="mdl-card__title-text">
+        {{ post.title }}
+      </h2>
+    </div>
+    <div class="mdl-card__subtitle-text">
+      <span>{{ post.date | date: "%b %-d, %Y" }}</span>
+    </div>
+    <div class="mdl-card__media"
+      <span>{{ post.date | date: "%b %-d, %Y" }}</span>
+    </div>
+    <div class="mdl-card__supporting-text">
+      {{ post.content | truncatewords:50}}
+    </div>
+    <div class="mdl-card__actions">
+      <a href="{{ post.url | prepend: site.baseurl }}">read more</a>
+    </div>
+  </div>
+{% endfor %}
