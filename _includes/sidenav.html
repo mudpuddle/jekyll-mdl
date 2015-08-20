@@ -6,6 +6,13 @@
 <div class="mdl-layout__drawer">
   <span class="mdl-layout-title">Title</span>
   <nav class="mdl-navigation">
+    <a class="mdl-navigation__link {% if page.url | prepend: site.baseurl == site.baseurl | append:'index.html' %} jekyll-mdl-navactive{% endif %}" href="{{ site.baseurl }}/">
+      <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored jekyll-mdl-navicon">
+        <i class="material-icons">home</i>
+      </button>
+      <span class="jekyll-mdl-navtext">Home</span>
+    </a>
+  <div class="divider"></div>
     {% assign pages_list = site.pages | sort:"url" %}
     {% for node in pages_list %}
       {% if node.title != null %}
