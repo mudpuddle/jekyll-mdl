@@ -5,6 +5,12 @@
 @import '_base.scss';
 @import '_syntax-highlighting.scss';
 
+// direct mdl overrides
+.mdl-button > a {
+  text-decoration: none;
+}
+
+
 .layout-transparent {
   background: url('../../public/images/background.jpg');
   background-size: cover;
@@ -42,6 +48,28 @@
 }
 .jekyll-mdl-navactive {
   background-color: rgb(238,238,238);
+}
+
+// post cards
+.jekyll-mdl-card > .mdl-card__title {
+  padding-bottom: 0px;
+}
+.jekyll-mdl-card > .mdl-card__title > .mdl-card__title-text {
+  font-weight: 700;
+}
+.jekyll-mdl-card > .mdl-card__subtitle-text {
+  margin-left: 40px;
+}
+.jekyll-mdl-card > .mdl-card__actions > .mdl-button {
+  float: right;
+}
+
+// back button
+#jekyll-mdl-back {
+  position: fixed;
+  left: 25px;
+  top: 25px;
+  z-index: 900;
 }
 
 // Share button

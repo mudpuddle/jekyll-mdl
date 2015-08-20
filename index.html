@@ -3,7 +3,7 @@ layout: home
 ---
 
 {% for post in site.posts %}
-  <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--4dp">
+  <div class="jekyll-mdl-card mdl-card mdl-cell mdl-cell--12-col mdl-shadow--4dp">
     <div class="mdl-card__title">
       <h2 class="mdl-card__title-text">
         {{ post.title }}
@@ -12,14 +12,19 @@ layout: home
     <div class="mdl-card__subtitle-text">
       <span>{{ post.date | date: "%b %-d, %Y" }}</span>
     </div>
-    <div class="mdl-card__media"
-      <span>{{ post.date | date: "%b %-d, %Y" }}</span>
+    <div class="mdl-card__media">
+
     </div>
     <div class="mdl-card__supporting-text">
       {{ post.content | truncatewords:50}}
     </div>
-    <div class="mdl-card__actions">
-      <a href="{{ post.url | prepend: site.baseurl }}">read more</a>
+    <div class="mdl-card__actions mdl-card--border">
+      <button class="mdl-button mdl-js-button mdl-button--primary">
+        <a href="{{ post.url | prepend: site.baseurl }}">
+          read more
+          <i class="material-icons">chevron_right</i>
+        </a>
+      </button>
     </div>
   </div>
 {% endfor %}
