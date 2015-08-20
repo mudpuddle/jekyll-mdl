@@ -19,12 +19,12 @@ layout: home
       {{ post.content | truncatewords:50}}
     </div>
     <div class="mdl-card__actions mdl-card--border">
-      <button class="mdl-button mdl-js-button mdl-button--primary">
-        <a href="{{ post.url | prepend: site.baseurl }}">
-          read more
-          <i class="material-icons">chevron_right</i>
-        </a>
-      </button>
+      <a href="{{ post.url | prepend: site.baseurl }}">
+        <button class="mdl-button mdl-js-button mdl-button--primary">
+            read more
+            <i class="material-icons">chevron_right</i>
+        </button>
+      <a href="{{ post.url | prepend: site.baseurl }}">
     </div>
   </div>
 {% endfor %}
