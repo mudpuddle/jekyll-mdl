@@ -12,9 +12,26 @@
 
 
 .layout-transparent {
-  background: url('../../public/images/background.jpg');
+  background: rgb(158, 158, 158) url('../../public/images/background.jpg');
+  background-position: center top;
   background-size: cover;
+  background-repeat: no-repeat;
   content: '';
+}
+
+@media screen and (min-width: 400px) and (max-width: 1024px) {
+  .layout-transparent {
+    background: rgb(158, 158, 158) url('../../public/images/background970.jpg');
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (max-width: 399px) {
+  .layout-transparent {
+      background: rgb(158, 158, 158);
+  }
 }
 
 .layout-transparent .mdl-layout__header,
