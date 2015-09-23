@@ -17,22 +17,30 @@ layout: default
     </div>
     <div class="mdl-grid">
       <div class="mdl-cell mdl-cell--12-col jekyll-mdl-pager-nav">
-        <div>
-          <a class="prev" href="{{page.previous.url}}">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900">
-              <i class="material-icons">arrow_back</i>
-
-            </button>
-          </a>
-        </div>
-        <div>
-          <a class="next" href="{{page.next.url}}">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900">
-
-              <i class="material-icons">arrow_forward</i>
-            </button>
-          </a>
-        </div>
+        {% if page.previous.url %}
+        <a href="{{page.previous.url | prepend: site.baseurl}}">
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900">
+            <i class="material-icons">arrow_back</i>
+          </button>
+          <span>Older</span>
+        </a>
+        {% else %}
+        <button disabled class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--icon mdl-color--white">
+          <i class="material-icons">arrow_back</i>
+        </button>
+        {% endif %}
+        {% if page.next.url %}
+        <a href="{{page.next.url | prepend: site.baseurl}}">
+          <span>Newer</span>
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900">
+            <i class="material-icons">arrow_forward</i>
+          </button>
+        </a>
+        {% else %}
+        <button disabled class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--icon mdl-color--white">
+          <i class="material-icons">arrow_forward</i>
+        </button>
+        {% endif %}
       </div>
     </div>
   </div>
