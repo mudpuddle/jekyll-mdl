@@ -1,17 +1,39 @@
 ---
 layout: default
 ---
-<div>
+<div class="page-content mdl-grid">
+  <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+  <div class="mdl-cell mdl-cell--8-col jekyll-mdl-content mdl-shadow--2dp">
+    <header>
+      <h2>{{ page.title }}</h2>
+      <span class="jekyll-mdl__supporting-text">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</span>
+    </header>
 
-  <header>
-    <h1>{{ page.title }}</h1>
-    <p>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
-
-  <div>
     <article>
       {{ content }}
     </article>
-  </div>
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col"></div>
+    </div>
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col jekyll-mdl-pager-nav">
+        <div>
+          <a class="prev" href="{{page.previous.url}}">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900">
+              <i class="material-icons">arrow_back</i>
 
+            </button>
+          </a>
+        </div>
+        <div>
+          <a class="next" href="{{page.next.url}}">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900">
+
+              <i class="material-icons">arrow_forward</i>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
