@@ -16,7 +16,11 @@ layout: home
 
     </div>
     <div class="mdl-card__supporting-text">
-      {{ post.content | truncatewords:50}}
+      {% if forloop.index0 == 0 %}
+        {{ post.content | truncatewords:100 | strip_html }}
+      {% else %}
+        {{ post.content | truncatewords:50 | strip_html }}
+      {% endif %}
     </div>
     <div class="mdl-card__actions mdl-card--border">
       <a href="{{ post.url | prepend: site.baseurl }}">
