@@ -10,26 +10,44 @@
   text-decoration: none;
 }
 
-
-.layout-transparent {
-  background: rgb(158, 158, 158) url('../../public/images/background.jpg');
+/*  This background was generated at this great site
+    http://mudcu.be/bg/
+ */
+body::before {
+  background: rgb(158, 158, 158) url('../../public/images/background.png');
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
   content: '';
+  background-attachment: fixed;
+  will-change: transform;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  position: fixed;
 }
-
 @media screen and (min-width: 400px) and (max-width: 1024px) {
-  .layout-transparent {
-    background: rgb(158, 158, 158) url('../../public/images/background970.jpg');
+  body::before {
+    background: rgb(158, 158, 158) url('../../public/images/background970.png');
     background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    content: '';
+    will-change: transform;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    position: fixed;
   }
 }
 
 @media screen and (max-width: 399px) {
-  .layout-transparent {
+  body::before {
       background: rgb(158, 158, 158);
   }
 }
@@ -40,6 +58,13 @@
   /* This background is dark, so we set text to white. Use 87% black instead if
      your background is light. */
   color: rgba(0,0,0, 0.87);
+}
+
+.jekyll-mdl-darker-text {
+  color: rgba(0, 0, 0, 0.87);
+}
+.jekyll-mdl-darker-border {
+  border-bottom: 1px solid rgba(0,0,0, 0.87);
 }
 
 .jekyll-mdl-content {
