@@ -32,12 +32,7 @@ this repository.
 | sharebutton.html| A simple include that can be added to post pages for simple sharing|
 | search          | Adding a search.md to the root folder will add a [AngularJS](https://angularjs.org/) enabled search page|
 | menu            | Any .md file in the root of the site shows up a page listed in the drawer menu, with a customizable icon|
-| LICENSE         | Project license information.                   |
-| package.json    | npm package information.                       |
-| README.md       | Details for quickly understanding the project. |
-| src             | Source code for MDL components.                |
-| templates       | Example templates.                             |
-| test            | Project test files.                            |
+
 
 ## Todo
 1. Finish search page functionality
