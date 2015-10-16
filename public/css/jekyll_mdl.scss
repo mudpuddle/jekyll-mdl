@@ -73,6 +73,13 @@ body::before {
   margin-bottom: 40%;
   padding: 20px;
 }
+.jekyll-mdl-center {
+  margin-right: auto;
+  margin-left: auto;
+}
+.jekyll-mdl-bigger-font > p {
+  font-size: 16px;
+}
 
 // pager nav
 .jekyll-mdl-pager-nav{
